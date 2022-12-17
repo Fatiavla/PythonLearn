@@ -1,11 +1,16 @@
-number = int(input('Введите число: '))
-new_number = 0
+# Напишите программу, которая принимает 
+# на вход вещественное число и показывает сумму его цифр.
+# Пример:
+# 6782 -> 23
+# 0,56 -> 11
+
+
+number = float(input('Введите число: '))
+
 result = 0
-count = len(number)
-for i in number:
-    new_number = number - (number % 10)
-    result = result + (number - new_number)
-    number = number / 10
+for i in str(number):
+    if i != '.':
+        result += int(i)
 
 
-print(number)
+print(result)
