@@ -4,20 +4,14 @@
 
 
 import random
-
 my_list = []
 for i in range(10):
     my_list.append(i)
 print(my_list)
 
-new_list = []
-for e in range(len(my_list)):
-        for j in range(len(my_list)):
-            new_list.append(random.randint(1,10))
-     
-print(new_list)
+for i in range(len(my_list)):
+    k = random.randint(0, 9)
+    my_list[i], my_list[k] = my_list[k], my_list[i]
 
-# if my_list[0] == my_list[0] and my_list[1] == my_list[1]:
-#     my_list[0] = my_list.append(random.randint(1,10))
-
+print(my_list)
 
